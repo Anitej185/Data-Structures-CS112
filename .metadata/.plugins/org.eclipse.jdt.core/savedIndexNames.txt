@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+/Users/anitej_thamma/Desktop/Data Structures/.metadata/.plugins/org.eclipse.jdt.core
+3124604304.index
+3418977264.index
+1388323402.index
+2236105233.index
+2766134696.index
+1412680892.index
+3443170566.index

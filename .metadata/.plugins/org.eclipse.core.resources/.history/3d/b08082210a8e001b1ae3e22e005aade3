@@ -1,0 +1,68 @@
+
+public class a {
+
+	public static ArrayList<TrieNode> completionList(TrieNode root, String[] allWords, String prefix) {
+		/** COMPLETE THIS METHOD **/
+
+// FOLLOWING LINE IS A PLACEHOLDER TO ENSURE COMPILATION
+// MODIFY IT AS NEEDED FOR YOUR IMPLEMENTATION
+		if (root == null) {
+			return null;
+		}
+		ArrayList<TrieNode> completeList = new ArrayList<>();
+		TrieNode ptr = root;
+
+		
+
+while (location1 != null) 
+{
+
+	if (location1.substr == null) 
+	{
+		location1 = location1.firstChild;
+	}
+
+	String string = allWords[location1.substr.wordIndex];
+	String inputtedValue = string.substring(0, location1.substr.endIndex + 1);
+
+	if (string.startsWith(prefix) || prefix.startsWith(inputtedValue)) 
+	{
+		if (location1.firstChild != null) 
+		{
+			resultsList.addAll(completionList(location1.firstChild, allWords, prefix));
+			location1 = location1.sibling;
+		}
+
+		else 
+		{
+			resultsList.add(location1);
+			location1 = location1.sibling;
+		}
+	}
+	// }
+	// if (prefix.startsWith(inputtedValue))
+	// {
+	// resultsList.add(location1);
+	// location1 = location1.sibling;
+	// }
+
+	// else
+	// {
+
+	// break;
+	// }
+	// }
+	// System.out.println("touches = " + inputtedValue);
+
+	else 
+	{
+		location1 = location1.sibling;
+	}
+}
+
+if (resultsList.isEmpty() == true || resultsList == null) // assuming its true
+{
+	return null;
+}
+return resultsList;
+}

@@ -1,0 +1,21 @@
+
+public class a {
+
+	public static void main(String []args)
+	{
+		public static LEFT_ROTATE(T, x)
+	  y = x.right
+	  x.right = y.left
+	  if y.left != NULL
+	      y.left.parent = x
+	  y.parent = x.parent
+	  if x.parent == NULL //x is root
+	      T.root = y
+	  elseif x == x.parent.left // x is left child
+	      x.parent.left = y
+	  else // x is right child
+	      x.parent.right = y
+	  y.left = x
+	  x.parent = y
+	}
+}
